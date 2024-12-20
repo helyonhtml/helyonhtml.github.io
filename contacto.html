@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEBANO CLASS - Contacto</title>
+    <style>
+        /* Fondo general */
+        body {
+            background: linear-gradient(to bottom, #9842b9, #2e2e4f);
+            font-family: 'Trebuchet MS', sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Encabezado */
+        header {
+            background: radial-gradient(#6e44ff, #261241);
+            padding: 20px 0;
+            
+            text-shadow: 2px 2px 5px rgb(12, 12, 11);
+        }
+
+        header h1 {
+            font-size: 50px;
+            color: #ffcc00;
+            ext-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Redes sociales */
+        .social-icons {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            background: #ff1d1d;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .social-icons a:hover {
+            background: #ffcc00;
+            transform: scale(1.1);
+        }
+
+        /* Formulario */
+        .contact-form {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #a003df;
+            border-radius: 5px;
+            background: #1e1e2f;
+            color: #ffffff;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        .contact-form button {
+            background: #a003df;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: #ffcc00;
+        }
+
+        /* Botón personalizado */
+        .btn-custom {
+            display: inline-block;
+            background: #a003df;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin: 20px;
+            transition: background-color 0.3s, transform 0.2s ease;
+            font-weight: bold;
+        }
+
+        .btn-custom:hover {
+            background: #ffcc00;
+            transform: translateY(-5px);
+        }
+
+        /* Estilo de las secciones */
+        section {
+            margin: 20px 0;
+        }
+
+        section h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contacto RODRIGO IZA 0995077076</h1>
+    </header>
+
+    <!-- Redes sociales -->
+    <section class="social-icons">
+        <a href="https://www.facebook.com/share/v/5vnKrkQqZArYtoae/" target="_blank">FACEBOOK</a> 
+        <a href="https://youtu.be/92T1-ytNmYg?si=e502961w3c6NrgpN" target="_blank">YOUTUBE</a>
+        <a href="https://www.tiktok.com/@hebanoclassoriginal?is_from_webapp=1&sender_device=pc" target="_blank">TIKTOK</a>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section>
+        <h3>Envíanos un mensaje</h3>
+        <div class="contact-form">
+            <form action="#">
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <textarea name="mensaje" rows="4" placeholder="Tu mensaje" required></textarea>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Navegación -->
+    <a href="galeria.html" class="btn-custom">Volver a Galería</a>
+</body>
+</html>

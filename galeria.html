@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEBANO CLASS - Galería</title>
+    <style>
+        /* Estilo general */
+        body {
+            background: linear-gradient(to bottom, #9842b9, #2e2e4f);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Encabezado */
+        header {
+            background: linear-gradient(90deg, #6e44ff, #261241, #ff0022);
+            padding: 20px 0;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 50px;
+            margin: 0;
+            text-transform: uppercase;
+            color: #ffcc00;
+        }
+
+        /* Slider de galería */
+        .slider-box {
+            width: 80%;
+            margin: 50px auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+            border: 3px solid #a003df;
+            background-color: #1e1e2f;
+            position: relative;
+        }
+
+        .slider-box ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            transition: transform 0.5s ease; /* Transición suave */
+        }
+
+        .slider-box ul li {
+            flex: 0 0 100%; /* Cada imagen ocupa el 100% */
+        }
+
+        .slider-box ul img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Botones de navegación */
+        .btn-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #a003df;
+            color: #fff;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-prev {
+            left: 10px;
+        }
+
+        .btn-next {
+            right: 10px;
+        }
+
+ 
+
+        /* Botones personalizados */
+        .btn-custom {
+            display: inline-block;
+            background-color: #a003df;
+            color: #fff;
+            font-size: 18px;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            margin: 30px 15px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
+        }
+
+        .btn-custom:hover {
+            background-color:#ffcc00;
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galería de Hebano Class</h1>
+    </header>
+
+    <!-- Galería de imágenes -->
+    <div class="slider-box">
+        <ul id="slider">
+            <li><img src="hebano imagenes/h2.jpg" alt="Imagen 1"></li>
+            <li><img src="hebano imagenes/h3.jpg" alt="Imagen 2"></li>
+            <li><img src="hebano imagenes/h4.jpg" alt="Imagen 3"></li>
+            <li><img src="hebano imagenes/h5.jpg" alt="Imagen 4"></li>
+            <li><img src="hebano imagenes/h6.jpg" alt="Imagen 5"></li>
+        </ul>
+        <!-- Botones de navegación -->
+        <button class="btn-nav btn-prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="btn-nav btn-next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- Navegación de páginas -->
+    <a href="index.html" class="btn-custom">Volver</a>
+    <a href="contacto.html" class="btn-custom">Contacto</a>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll("#slider li");
+        const totalImages = images.length;
+
+        function moveSlide(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = totalImages - 1;
+            } else if (currentIndex >= totalImages) {
+                currentIndex = 0;
+            }
+
+            const slider = document.getElementById("slider");
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;  // Cambiar la posición del carrusel
+        }
+    </script>
+</body>
+</html>
+
